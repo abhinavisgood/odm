@@ -1,0 +1,7 @@
+/root/Storage/one1
+
+rclone mount Oned:/  /root/Storage/one1 --allow-non-empty   --allow-root --async-read  --file-perms 0777 --dir-perms 0777 --vfs-cache-mode off
+rclone mount oned:"MyReadNovels/"  down   --allow-non-empty --vfs-read-ahead  50M --allow-other --allow-root --async-read  --file-perms 0777 --dir-perms 0777 --vfs-write-wait 10m --vfs-cache-mode writes --dir-cache-time 2s --cache-dir $PWD/vfs --poll-interval  2s --vfs-cache-poll-interval 2s --vfs-cache-max-size  5M  --vfs-cache-max-age 12m --gid 0 --uid 0 --write-back-cache --vfs-read-chunk-size 200M --vfs-read-chunk-size-limit 0 --transfers 5
+
+rclone mount oned:"MyReadNovels/"  down   --allow-non-empty --vfs-read-ahead  50M --allow-other --allow-root --async-read  --file-perms 0777 --dir-perms 0777 --vfs-write-wait 10m --vfs-cache-mode writes --dir-cache-time 6s --cache-dir vfs --poll-interval  5s --vfs-cache-poll-interval 60s --vfs-cache-max-size  5G  --vfs-cache-max-age 12m --gid 0 --uid 0 --write-back-cache --vfs-read-chunk-size 200M --vfs-read-chunk-size-limit 0 --transfers 51
+fusermount -u /path/to/local/mount/point

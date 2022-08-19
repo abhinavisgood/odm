@@ -1,0 +1,9 @@
+--dsm --mesh-size 500000  --min-num-features  16000  --pc-filter 0  --pc-sample 0.007 --use-3dmesh True --texturing-data-term area -- rerun-from dataset --pc-quality ultra --pc-geometric True --mesh-octree-depth 13 --feature-quality ultra --dem-gapfill-steps 10 --auto-boundary True
+
+
+docker run -ti --rm -v /home/abh/project:/datasets opendronemap/odm --project-path /datasets project  --merge all --dsm --mesh-size 500000  --min-num-features  16000  --pc-filter 0  --pc-sample 0.007 --use-3dmesh  --texturing-data-term area --rerun-from dataset --pc-quality ultra --pc-geometric --mesh-octree-depth 13 --feature-quality ultra --dem-gapfill-steps 10 --auto-boundary
+
+
+docker run -ti --rm -v /home/abh/project:/datasets opendronemap/odm --project-path /datasets project  --merge all --dsm   --pc-filter 0  --pc-sample 0.007 --use-3dmesh  --texturing-data-term area --rerun-from dataset --pc-quality ultra --pc-geometric --feature-quality ultra --dem-gapfill-steps 10
+
+docker run -ti --rm -v /home/abh:/datasets opendronemap/odm --project-path /datasets project  --merge all --dsm --optimize-disk-space --pc-rectify  --use-hybrid-bundle-adjustment --max-concurrency 10 --ignore-gsd 

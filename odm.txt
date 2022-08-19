@@ -1,0 +1,1 @@
+ --ignore-gsd --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --rerun-all --verbose --debug --feature-quality ultra --use-hybrid-bundle-adjustment --use-3dmesh --pc-classify --dsm --time --gps-accuracy 5 --sfm-algorithm triangulation 
